@@ -11,10 +11,10 @@ const houseArray = [
 		price	: 900000
 	},
 	{
-		id: 2,
-		address: "89 Road of Forks, Bern",
-		country: "Switzerland",
-		price: 500000
+		id		: 2,
+		address	: "89 Road of Forks, Bern",
+		country	: "Switzerland",
+		price	: 500000
 	}
 ]
 
@@ -35,8 +35,8 @@ const HouseList = () => {
 			[
 				...houses,
 				{
-					id		: 3,
-					address	: `${Math.random() * 100} Valley Way, New York`,
+					id		: houses.at(-1).id + 1,
+					address	: `${(Math.random() * 10000000).toString().substring(0, 6)} Alley Way, New York`,
 					country	: "USA",
 					price	: 1000000
 				}
@@ -60,7 +60,12 @@ const HouseList = () => {
 					</tr>
 				</thead>
 				<tbody>
-					{houses.map(h => <HouseRow key={h.id} house={h} />)}
+					{houses.map(h => <HouseRow key={h.id} {...h} />)}
+					{/*
+						Or:
+							{houses.map(h => <HouseRow key={h.id} house={h} />)}
+							{houses.map(h => <HouseRow key={h.id} address={h.address} country={h.country} price={h.price} />)}
+					*/}
 				</tbody>
 			</table>
 			<button className="btn btn-primary" onClick={addHouse}>Add</button>

@@ -1,9 +1,11 @@
-const HouseRow = ({ house }) => {
+// Alternative way: const HouseRow = ({ house : {address, country, price} }) => {
+
+const HouseRow = ({ address, country, price }) => {
 	return (
 		<tr>
-			<td>{house.address}</td>
-			<td>{house.country}</td>
-			<td>{house.price}</td>
+			<td>{address}</td>
+			<td>{country}</td>
+			<td>{price}</td>
 		</tr>
 	)
 }
