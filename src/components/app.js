@@ -1,6 +1,7 @@
 // const { default : Banner } = require("./banner")
-import Banner from "@/components/banner"
-import BannerWithChildren from "@/components/bannerWithChildren"
+import Banner				from "@/components/banner"
+import BannerWithChildren	from "@/components/bannerWithChildren"
+import HouseList			from "@/components/houseList"
 
 const App = () => {
 
@@ -13,6 +14,8 @@ const App = () => {
 			<BannerWithChildren>Text provided via {"{"}children{"}"} object</BannerWithChildren>
 
 			{someJSX}
+
+			<HouseList/>
 
 		</div>
 	)
