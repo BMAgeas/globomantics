@@ -2,6 +2,7 @@
 import Banner				from "@/components/banner"
 import BannerWithChildren	from "@/components/bannerWithChildren"
 import HouseList			from "@/components/houseList"
+import UseRefDemo			from "./useRefDemo"
 
 const App = () => {
 
@@ -16,6 +17,9 @@ const App = () => {
 			{someJSX}
 
 			<HouseList/>
+
+			<br/><br/>
+			<UseRefDemo/>
 
 		</div>
 	)
