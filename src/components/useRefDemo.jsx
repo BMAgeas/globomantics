@@ -11,10 +11,11 @@ const UseRefDemo = () => {
 	const inputBoxRef = React.useRef()
 
 	return (
-		<div style={{ border : "1px solid black" }}>
+		<div style={{ border : "1px solid black", padding : "1rem" }}>
 
-			<button onClick={() => inputBoxRef.current.focus()}>focus() the input-box</button>
+			<b>useRef() demo</b>
 			<br/>
+			<button onClick={() => inputBoxRef.current.focus()}>focus() the input-box</button>
 			<input ref={inputBoxRef} type="text" />
 			
 		</div>

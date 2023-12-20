@@ -1,8 +1,9 @@
-// const { default : Banner } = require("./banner")
 import Banner				from "@/components/banner"
 import BannerWithChildren	from "@/components/bannerWithChildren"
 import HouseList			from "@/components/houseList"
-import UseRefDemo			from "./useRefDemo"
+import UseRefDemo			from "@/components/useRefDemo"
+import UseStateDemo			from "@/components/useStateDemo"
+import UseEffectDemo		from "@/components/useEffectDemo"
 
 const App = () => {
 
@@ -20,6 +21,12 @@ const App = () => {
 
 			<br/><br/>
 			<UseRefDemo/>
+
+			<br/><br/>
+			<UseStateDemo/>
+
+			<br/><br/>
+			<UseEffectDemo/>
 
 		</div>
 	)
